@@ -18,5 +18,6 @@ namespace PeopleSearch.Models
         public string Interests { get; set; }
         public byte[] PictureBytes { get; set; }
         public string ImageSource { get; set; }
+        public string Address { get; set; }
     }
 }

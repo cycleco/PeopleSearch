@@ -51,7 +51,8 @@
                 Age: vm.User.Age,
                 FirstName: vm.User.FirstName,
                 LastName: vm.User.LastName,
-                Interests: vm.User.Interests
+                Interests: vm.User.Interests,
+                Address: vm.User.Address
 //                PictureBytes: vm.User.PictureBytes   // multi-part data not implemented yet
             };
 
