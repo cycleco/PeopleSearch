@@ -130,7 +130,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Client\Directives\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -174,6 +173,10 @@
     <Compile Include="Migrations\201710110219074_Initial.Designer.cs">
       <DependentUpon>201710110219074_Initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710151801022_ImageSource.cs" />
+    <Compile Include="Migrations\201710151801022_ImageSource.Designer.cs">
+      <DependentUpon>201710151801022_ImageSource.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\PeopleSearchContext.cs" />
     <Compile Include="Models\User.cs" />
@@ -183,9 +186,21 @@
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Client\app.js" />
     <Content Include="Client\Controllers\UsersController.js" />
+    <Content Include="Client\Directives\file.js" />
     <Content Include="Client\Services\UsersService.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\images\x-blank-block.jpeg" />
+    <Content Include="Content\images\x-blank-face.png" />
+    <Content Include="Content\images\x-group.jpeg" />
+    <Content Include="Content\images\z-bird.jpeg" />
+    <Content Include="Content\images\z-caribiner.jpeg" />
+    <Content Include="Content\images\z-fly.jpeg" />
+    <Content Include="Content\images\z-hike-trail.jpeg" />
+    <Content Include="Content\images\z-mtb-bike.jpeg" />
+    <Content Include="Content\images\z-mtb-jump.jpeg" />
+    <Content Include="Content\images\z-rear-wheel.jpeg" />
+    <Content Include="Content\images\z-road-bike.jpeg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -244,6 +259,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201710110219074_Initial.resx">
       <DependentUpon>201710110219074_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710151801022_ImageSource.resx">
+      <DependentUpon>201710151801022_ImageSource.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

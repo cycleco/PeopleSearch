@@ -28,10 +28,26 @@ namespace PeopleSearch.Migrations
             //    );
             //
             context.Users.AddOrUpdate(x => x.Id,
-                new User() {Age = 22, FirstName = "Benjamin", LastName = "Copperfield", Interests = "magic, writing, fishing"},
-                new User() { Age = 22, FirstName = "James", LastName = "Fields", Interests = "flying, running, tennis" },
-                new User() { Age = 22, FirstName = "Sandy", LastName = "Salsa", Interests = "mountain biking, music, sailing" },
-                new User() { Age = 22, FirstName = "Andy", LastName = "Elderberry", Interests = "cycling, movies, astronomy" }
+                new User()
+                {
+                    Age = 22, FirstName = "Benjamin", LastName = "Copperfield", Interests = "magic, writing, fishing",
+                    ImageSource = "../Content/images/z-bird.jpeg"
+                },
+                new User()
+                {
+                    Age = 22, FirstName = "James", LastName = "Fields", Interests = "flying, running, tennis",
+                    ImageSource = "../Content/images/z-fly.jpeg"
+                },
+                new User()
+                {
+                    Age = 22, FirstName = "Sandy", LastName = "Salsa", Interests = "mountain biking, music, sailing",
+                    ImageSource = "../Content/images/z-mtb-jump.jpeg"
+                },
+                new User()
+                {
+                    Age = 22, FirstName = "Andy", LastName = "Elderberry", Interests = "cycling, movies, astronomy",
+                    ImageSource = "../Content/images/z-road-bike.jpeg"
+                }
                 );
         }
     }

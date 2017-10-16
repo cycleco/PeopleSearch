@@ -52,7 +52,7 @@
                 FirstName: vm.User.FirstName,
                 LastName: vm.User.LastName,
                 Interests: vm.User.Interests
-                // todo PictureBytes:
+//                PictureBytes: vm.User.PictureBytes   // multi-part data not implemented yet
             };
 
             usersService.addUser(userData)

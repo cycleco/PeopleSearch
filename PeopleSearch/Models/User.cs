@@ -17,5 +17,6 @@ namespace PeopleSearch.Models
         public int Age { get; set; }
         public string Interests { get; set; }
         public byte[] PictureBytes { get; set; }
+        public string ImageSource { get; set; }
     }
 }
