@@ -5,7 +5,22 @@
             <p></p>
         </div>
         
-        <p><a data-ng-click="vm.showadd()" href="javascript:;" class="btn btn-primary">Add New User</a></p>
+        <div>
+            <div class="col-lg-8"></div>
+            <div class="col-lg-4">
+                <label for="title">Network Delay (ms)</label>
+                <input type="text" placeholder="Network Delay" ng-model="vm.httpDelayConfig.milliseconds"/>
+            </div>
+        </div>
+        <div>
+            <div class="col-lg-8"></div>
+            <div class="col-lg-4" ng-show="vm.network.loader.loading"><h3>Loading ...</h3></div>
+            <div class="col-lg-4" ng-hide="vm.network.loader.loading"></div>
+        </div>
+
+        <div>
+            <p><a data-ng-click="vm.showadd()" href="javascript:;" class="btn btn-primary">Add New User</a></p>
+        </div>
 
         <script type="text/ng-template" id="modalUser.html">
             <div class="modal-content">

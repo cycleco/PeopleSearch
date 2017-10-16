@@ -6,19 +6,26 @@
         .controller('usersController', usersController)
         .controller('userModalController', userModalController);
 
-    usersController.$inject = ['$uibModal', 'usersService'];
+    usersController.$inject = ['$uibModal', 'usersService', 'httpDelayConfig'];
     userModalController.$inject = ['$uibModalInstance'];
 
-    function usersController($uibModal, usersService) {
+    function usersController($uibModal, usersService, httpDelayConfig) {
         var vm = this;
 
         vm.title = 'usersController';
         vm.message = "Yo Scott";
         vm.editMode = false;
+        vm.httpDelayConfig = httpDelayConfig;
+        vm.network = {};
+        vm.network.loader = {
+            loading: false
+        };
 
         vm.getUsers = function getUsers() {
+            vm.network.loader.loading = true;
             usersService.getUsers()
                 .then(function successCallback(users) {
+                        vm.network.loader.loading = false;
                         vm.users = users;
                         console.log(vm.users);
                 }
@@ -31,8 +38,10 @@
 
 
         vm.deleteUser = function deleteUser(id) {
+            vm.network.loader.loading = true;
             usersService.deleteUser(id)
                 .then(function successCallback(response) {
+                        vm.network.loader.loading = false;
                         console.log(response);
                         vm.getUsers();
                     }
@@ -56,8 +65,10 @@
 //                PictureBytes: vm.User.PictureBytes   // multi-part data not implemented yet
             };
 
+            vm.network.loader.loading = true;
             usersService.addUser(userData)
                 .then(function successCallback(response) {
+                        vm.network.loader.loading = false;
                         vm.users.data.push(response.data);
                         vm.User = {};
                     console.log(response);
