@@ -18,7 +18,7 @@
 
     app.service('httpDelayConfig', function () {
         return {
-            milliseconds: 5000
+            milliseconds: 500
         };
     });
 
