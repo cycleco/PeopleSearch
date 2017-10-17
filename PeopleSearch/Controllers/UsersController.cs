@@ -15,7 +15,16 @@ namespace PeopleSearch.Controllers
 {
     public class UsersController : ApiController
     {
-        private PeopleSearchContext db = new PeopleSearchContext();
+        private PeopleSearchContext db;
+
+        public UsersController()
+        {
+            db = new PeopleSearchContext();
+        }
+        public UsersController(PeopleSearchContext context)
+        {
+            db = context;
+        }
 
         // GET: api/Users
         public IQueryable<User> GetUsers()
