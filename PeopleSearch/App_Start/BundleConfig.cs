@@ -31,7 +31,7 @@ namespace PeopleSearch
                 "~/node_modules/angular-route/angular-route.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular-ui-bootstrap").Include(
-                "~/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls-2.0.0-SNAPSHOT.min.js"));
+                "~/node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/app").IncludeDirectory(
                 "~/Client", "*.js", true));
