@@ -19,8 +19,9 @@ module.exports = function(config) {
             'node_modules/angular/angular.min.js',
             'node_modules/angular-route/angular-route.js',
             'node_modules/angular-route/angular-route.min.js',
-            'node_modules/angular-ui-bootstrap/ui-bootstrap-tpls-2.0.0-SNAPSHOT.js',
-            'node_modules/angular-ui-bootstrap/ui-bootstrap-tpls-2.0.0-SNAPSHOT.min.js',
+            // 'node_modules/angular-ui-bootstrap/ui-bootstrap-tpls-2.0.0-SNAPSHOT.js',
+            // 'node_modules/angular-ui-bootstrap/ui-bootstrap-tpls-2.0.0-SNAPSHOT.min.js',
+            'node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js',
             'node_modules/angular-mocks/angular-mocks.js',
             'Client/*.js',
             'Client/**/*.js',
@@ -64,7 +65,10 @@ module.exports = function(config) {
 
         // start these browsers
         // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-        browsers: ['PhantomJS'],
+        browsers: [
+//            'PhantomJS'
+            ,'Chrome'
+        ],
 
 
         // Continuous Integration mode
@@ -78,8 +82,9 @@ module.exports = function(config) {
         // notify karma of the available plugins
         plugins: [
             'karma-jasmine',
-            'karma-phantomjs-launcher',
-            'karma-html-detailed-reporter'
+//            'karma-phantomjs-launcher',
+            'karma-html-detailed-reporter',
+            'karma-chrome-launcher'
         ],
 
         // configure the HTML-Detailed-Reporter to put all results in one file    
